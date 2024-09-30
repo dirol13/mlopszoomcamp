@@ -40,11 +40,3 @@ print('predicted mean duration:', y_pred.mean())
 df_result = pd.DataFrame()
 df_result['ride_id'] = df['ride_id']
 df_result['predicted_duration'] = y_pred
-print(y_pred)
-
-df_result.to_parquet(
-    output_file,
-    engine='pyarrow',
-    compression=None,
-    index=False
-)
