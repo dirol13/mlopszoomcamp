@@ -1,0 +1,221 @@
+{
+    "state": "Done",
+    "series": [
+      {
+        "refId": "A",
+        "meta": {
+          "type": "timeseries-wide",
+          "typeVersion": [
+            0,
+            0
+          ],
+          "executedQueryString": "SELECT \"timestamp\" AS \"time\", quantile, value, trip_distance FROM homework05 LIMIT 50 "
+        },
+        "fields": [
+          {
+            "name": "Time",
+            "type": "time",
+            "typeInfo": {
+              "frame": "time.Time"
+            },
+            "config": {},
+            "values": [
+              1711670400000,
+              1711756800000,
+              1711843200000,
+              1711929600000
+            ],
+            "entities": {},
+            "state": null
+          },
+          {
+            "name": "quantile",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            },
+            "labels": {
+              "trip_distance": "trip_distance"
+            },
+            "config": {},
+            "values": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "entities": {},
+            "state": {
+              "calcs": {
+                "sum": 2,
+                "max": 0.5,
+                "min": 0.5,
+                "logmin": 0.5,
+                "mean": 0.5,
+                "last": 0.5,
+                "first": 0.5,
+                "lastNotNull": 0.5,
+                "firstNotNull": 0.5,
+                "count": 4,
+                "nonNullCount": 4,
+                "allIsNull": false,
+                "allIsZero": false,
+                "range": 0,
+                "diff": 0,
+                "delta": 0,
+                "step": 0,
+                "diffperc": 0,
+                "previousDeltaUp": true
+              }
+            }
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            },
+            "labels": {
+              "trip_distance": "trip_distance"
+            },
+            "config": {},
+            "values": [
+              1.75,
+              1.87,
+              2.03,
+              0.81
+            ],
+            "entities": {},
+            "state": {
+              "calcs": {
+                "sum": 6.460000000000001,
+                "max": 2.03,
+                "min": 0.81,
+                "logmin": 0.81,
+                "mean": 1.6150000000000002,
+                "last": 0.81,
+                "first": 1.75,
+                "lastNotNull": 0.81,
+                "firstNotNull": 1.75,
+                "count": 4,
+                "nonNullCount": 4,
+                "allIsNull": false,
+                "allIsZero": false,
+                "range": 1.2199999999999998,
+                "diff": -0.94,
+                "delta": 1.0899999999999999,
+                "step": -1.2199999999999998,
+                "diffperc": -0.5371428571428571,
+                "previousDeltaUp": false
+              }
+            }
+          }
+        ],
+        "length": 4
+      }
+    ],
+    "annotations": [],
+    "request": {
+      "app": "dashboard",
+      "requestId": "Q102",
+      "timezone": "browser",
+      "panelId": 1,
+      "panelPluginId": "timeseries",
+      "dashboardUID": "de04zwgechvy8c",
+      "range": {
+        "from": "2024-03-29T00:00:00.000Z",
+        "to": "2024-04-01T00:00:00.000Z",
+        "raw": {
+          "from": "2024-03-29T00:00:00.000Z",
+          "to": "2024-04-01T00:00:00.000Z"
+        }
+      },
+      "timeInfo": "",
+      "interval": "5m",
+      "intervalMs": 300000,
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "builder",
+          "format": "time_series",
+          "rawQuery": true,
+          "rawSql": "SELECT \"timestamp\" AS \"time\", quantile, value, trip_distance FROM homework05 LIMIT 50 ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "alias": "\"time\"",
+                "parameters": [
+                  {
+                    "name": "\"timestamp\"",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              },
+              {
+                "parameters": [
+                  {
+                    "name": "quantile",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              },
+              {
+                "parameters": [
+                  {
+                    "name": "value",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              },
+              {
+                "parameters": [
+                  {
+                    "name": "trip_distance",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "homework05"
+        }
+      ],
+      "maxDataPoints": 1110,
+      "scopedVars": {
+        "__interval": {
+          "text": "5m",
+          "value": "5m"
+        },
+        "__interval_ms": {
+          "text": "300000",
+          "value": 300000
+        }
+      },
+      "startTime": 1728293078752,
+      "filters": [],
+      "endTime": 1728293078801
+    },
+    "timings": {
+      "dataProcessingTime": 0
+    },
+    "structureRev": 2
+  }
